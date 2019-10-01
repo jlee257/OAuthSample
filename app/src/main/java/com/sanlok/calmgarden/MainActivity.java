@@ -3,6 +3,7 @@ package com.sanlok.calmgarden;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.browser.customtabs.CustomTabsIntent;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,13 +12,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Main Activity");
 
-        CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-                .addDefaultShareMenuItem()
-                .setToolbarColor(this.getResources()
-                        .getColor(R.color.colorPrimary))
-                .setShowTitle(true)
-                .setCloseButtonIcon(backArrow)
-                .build();
+        findViewById(R.id.next_activity_button).setOnClickListener(v -> {
+            startActivity(new Intent(this, LoginActivity.class));
+        });
     }
 }

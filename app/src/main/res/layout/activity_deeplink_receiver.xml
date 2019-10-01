@@ -4,13 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/next_activity_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="go to login activity"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".DeeplinkReceiverActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
